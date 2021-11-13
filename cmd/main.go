@@ -18,7 +18,7 @@ type templateHandler struct {
 func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.once.Do(func() {
 		t.temp1 =
-			template.Must(template.ParseFiles(filepath.Join("templates", t.filename)))
+			template.Must(template.ParseFiles(filepath.Join("web/html", t.filename)))
 	})
 
 	t.temp1.Execute(w, nil)
