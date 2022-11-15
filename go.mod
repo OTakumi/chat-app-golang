@@ -1,5 +1,5 @@
-module github.com/OTakumi/chat-app-golang
+module chat-app-golang
 
-go 1.17
+go 1.19
 
-require github.com/gorilla/websocket v1.5.0 // indirect
+require github.com/gorilla/websocket v1.5.0

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"path/filepath"
@@ -30,6 +31,7 @@ func main() {
 	http.Handle("/room", r)
 
 	// start the web server
+	fmt.Println("start server")
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal("ListenAndServer: ", err)
 	}
